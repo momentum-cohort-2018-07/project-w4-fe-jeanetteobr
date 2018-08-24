@@ -1,0 +1,24 @@
+body{
+    font-family: Montserrat, sans-serif;
+}
+
+header {
+    font-family: Raleway, sans-serif;
+    background-color: burlywood;
+    text-align: center;
+    font-size: 60px;
+    padding: 25px;
+}
+
+.col-3 {
+ background-color: lightgray;
+ border: 8px solid white;
+}
+
+#audio-player{
+    margin-top: 35px;
+}
+
+#search-form button {
+    margin-top: 5px; 
+}

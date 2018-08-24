@@ -2,5 +2,11 @@
   "private": true,
   "devDependencies": {
     "parcel-bundler": "^1.8.1"
+  },
+  "dependencies": {
+    "main.css": "0.0.1",
+    "shoelace": "^0.1.1",
+    "shoelace-css": "^1.0.0-beta24",
+    "superagent": "^3.8.3"
   }
 }
