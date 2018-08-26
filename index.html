@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music Search App</title>
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway:700,200" rel="stylesheet">
+</head>
+
+<body>
+    <header class="hero-image">
+        <div class="hero-text">
+           <p>Music Search App</p>
+           <p class="subtitle">Search to your heart's content!</p>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <audio id="audio-player" controls class="col-12" src="#">
+            </audio>
+        </div>
+        <hr>
+            <form class="row" id="search-form">
+               <div class="col-12"><input id="search-input" type="text" placeholder="Search Artists"></div> 
+               <div class="col-1"><button id="search-button" type="submit" >Search</button></div>
+            </form>
+        <hr>
+        <div id="results-div" class="row row-start">
+        </div>
+    </div>
+</body>
+
+</html>
