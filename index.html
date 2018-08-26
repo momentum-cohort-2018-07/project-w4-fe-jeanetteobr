@@ -7,20 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Music Search App</title>
     <script src="script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway:700, 400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway:700,200" rel="stylesheet">
 </head>
 
 <body>
-    <header>Really Awesome Music Site</header>
+    <header class="hero-image">
+        <div class="hero-text">
+           <p>Music Search App</p>
+           <p class="subtitle">Search to your heart's content!</p>
+        </div>
+    </header>
     <div class="container">
-        <div id="audio-player" class="row">
-            <audio controls class="col-12">
-                <source src="#">
+        <div class="row">
+            <audio id="audio-player" controls class="col-12" src="#">
             </audio>
         </div>
         <hr>
             <form class="row" id="search-form">
-               <div class="col-12"><input id="search-input" type="text" value="Search Artists/Albums/Songs"></div> 
+               <div class="col-12"><input id="search-input" type="text" placeholder="Search Artists"></div> 
                <div class="col-1"><button id="search-button" type="submit" >Search</button></div>
             </form>
         <hr>

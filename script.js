@@ -6,6 +6,14 @@ import request from 'superagent'
 let resultsDiv = document.getElementById('results-div')
 let searchForm = document.getElementById('search-form')
 
+resultsDiv.addEventListener('click', function (e) {
+  if (e.target && e.target.classList.contains('col-3')) {
+    console.log('you selected a song preview')
+    document.getElementById('audio-player').src = e.target.dataset.previewUrl
+    document.getElementById('audio-player').play()
+  }
+})
+
 searchForm.addEventListener('submit', event => {
   event.preventDefault()
 
@@ -13,7 +21,7 @@ searchForm.addEventListener('submit', event => {
   let searchTerms = searchBar.value.split(' ').map(searchTerm => searchTerm.trim())
   let userInput = searchTerms.toString().replace(/,/g, '+')
 
-  request.get('https://itunes.apple.com/search?term=' + userInput)
+  request.get('https://itunes.apple.com/search?term=' + userInput + '&country=jp')
     .then(response => JSON.parse(response.text))
     .then(body => {
       resultsDiv.innerHTML = ' '
@@ -28,6 +36,7 @@ function createResultDiv (result) {
   if (result.kind === 'song') {
     let outputDiv = document.createElement('div')
     outputDiv.classList.add('col-3')
+    outputDiv.dataset.previewUrl = result.previewUrl
     outputDiv.innerHTML = `
     <img src='${result.artworkUrl100}' alt='${result.collectionName}-album cover'>
     <div id="track-name">${result.trackName}</div>
