@@ -29,9 +29,9 @@ function createResultDiv (result) {
     let outputDiv = document.createElement('div')
     outputDiv.classList.add('col-3')
     outputDiv.innerHTML = `
-    <img src='${result.artworkURL100}' alt='${result.collectionName}-album cover'>
-    <span class="track-name"><p>${result.trackName}</p></span>
-    <span class="artist-name"><p>${result.artistName}</p></span>
+    <img src='${result.artworkUrl100}' alt='${result.collectionName}-album cover'>
+    <div id="track-name">${result.trackName}</div>
+    <div id="artist-name">${result.artistName}</div>
     `
     resultsDiv.appendChild(outputDiv)
   }
